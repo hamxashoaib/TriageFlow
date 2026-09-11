@@ -198,18 +198,18 @@ The model is configured with a low temperature of `0.1` to encourage more consis
 
 ```text
 triageflow/
-│
-├── app/
-│   └── main.py
-│
+├── assets/
+│   ├── dashboard-input.png 
+│   └── triage-result.png   
 ├── core/
-│   ├── llm_engine.py
-│   ├── schemas.py
-│   └── guardrails.py
-│
-├── .env
-├── .gitignore
-└── requirements.txt
+│   ├── llm_engine.py       
+│   ├── schemas.py          
+│   └── guardrails.py       
+├── .env.example            
+├── .gitignore              
+├── README.md               
+├── app.py                  
+└── requirements.txt        
 ```
 
 The project intentionally keeps the architecture lightweight and separates the user interface, AI processing, data schema, and safety logic.
@@ -623,6 +623,16 @@ Mujhe pait mein shadeed dard hai aur lagatar ulti ho rahi hai.
 The model detects the language and returns it as part of the structured assessment.
 
 This allows the system to work with more natural patient communication.
+
+---
+
+## 🖼️ Dashboard Preview
+
+### Patient Intake & Assessment Form
+![Dashboard Input](assets/dashboard-input.png)
+
+### Emergency Triage Result & Clinical Signals
+![Triage Result](assets/triage-result.png)
 
 ---
 
