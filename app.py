@@ -57,6 +57,46 @@ def inject_custom_css():
         /* Typography */
         h1, h2, h3 { font-weight: 600; letter-spacing: -0.5px; }
         
+        /* Input Fields & Textareas — Explicit light/dark mode override */
+        .stTextArea textarea, 
+        .stTextInput input, 
+        .stNumberInput input {
+            background-color: #0A1410 !important;
+            color: #e2e8f0 !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            border-radius: 6px !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .stTextArea textarea:focus, 
+        .stTextInput input:focus, 
+        .stNumberInput input:focus {
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 1px var(--primary) !important;
+        }
+
+        .stTextArea textarea::placeholder, 
+        .stTextInput input::placeholder {
+            color: #64748b !important;
+            opacity: 1 !important;
+        }
+
+        /* Selectbox container styling */
+        div[data-baseweb="select"] > div {
+            background-color: #0A1410 !important;
+            color: #e2e8f0 !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
+        /* Input Labels */
+        .stTextArea label, 
+        .stTextInput label, 
+        .stNumberInput label, 
+        .stSelectbox label {
+            color: var(--text-main) !important;
+            font-weight: 500 !important;
+        }
+
         /* Glassmorphism Panels */
         .glass-panel {
             background: var(--bg-surface);
